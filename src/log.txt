@@ -1,0 +1,9 @@
+Stuck on logger not displaying information.
+Stuck on Thymeleaf routing not the correct file.
+    - Plan, back off a bit, figure out how to enable logging.
+    - If not figure out how Thymeleaf routing works. (配置前缀和后缀）
+        -  Controller 没注册，application context 里面没有注册  Container里面没有
+        - 解决：包没有放在application路经下面，导致component scan不到
+    - 图片不被显示
+        - 解决：创建一个静态static包，把图片放在images文件包下边（约定大于一切）
+

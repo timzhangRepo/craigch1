@@ -1,3 +1,24 @@
+
+
+
+-
+
+
+- Chapter 3 分切线 （up)
+
+
+- 卡在了Taco Order的绑定上，需要仔细看一下书（next 50 mins) 读懂一下逻辑 （已解决）
+    - traceback回去
+    - Error -> Expected session attribute 'tacoOrder'
+    - @SessionAttributes("tacoOrder") 在Design Controller，开始一个新的Session，通过设定同样的session在OrderController，
+    我们可以直接访问所有Model属性。TacoOrder在Design Controller Init , 之后我们通过Parameter的方式进行访问和获取。
+
+Thymeleaf一些naming convention细看，暂时跳过
+    -Ex: Taco(name=123123, ingredients=[Ingredient(id=FLTO, name=Flour Tortilla, type=WRAP),
+    Ingredient(id=GRBF, name=Ground Beef, type=PROTEIN), Ingredient(id=CHED, name=Cheddar, type=CHEESE),
+    Ingredient(id=TMTO, name=Diced Tomatoes, type=VEGGIES), Ingredient(id=SRCR, name=Sour Cream, type=SAUCE)])
+知识点 converter interface in Spring
+
 Stuck on logger not displaying information.
 Stuck on Thymeleaf routing not the correct file.
     - Plan, back off a bit, figure out how to enable logging.
@@ -6,4 +27,7 @@ Stuck on Thymeleaf routing not the correct file.
         - 解决：包没有放在application路经下面，导致component scan不到
     - 图片不被显示
         - 解决：创建一个静态static包，把图片放在images文件包下边（约定大于一切）
+
+
+
 

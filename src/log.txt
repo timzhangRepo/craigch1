@@ -1,11 +1,17 @@
 
 
 
--
+- 目前在Uncharted Territory ，SQL 以及 controller 映射关系，是自己的弱点，需要好好学习去更正和修改，加油！
+    -
 
+H2 无法看到自己的输入的SQL数据，不知道数据被放在那里了。目前能链接，但是找不到，不知道该怎么办
+直接跑SpringBoot是没有办法解决这个问题的，需要在console里选择这个SQL，IntelliJ Integrated Development会帮你跑
+
+-Iterable interface 需要细学习一下，现在还是不懂
+-Task is to swap off this H2, and swap on a SQL server which also perform the same thing
+**我发现我喜欢有instructions去做事情，遇到一个事情，切分，细分。
 
 - Chapter 3 分切线 （up)
-
 
 - 卡在了Taco Order的绑定上，需要仔细看一下书（next 50 mins) 读懂一下逻辑 （已解决）
     - traceback回去

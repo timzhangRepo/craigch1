@@ -2,7 +2,17 @@
 
 
 - 目前在Uncharted Territory ，SQL 以及 controller 映射关系，是自己的弱点，需要好好学习去更正和修改，加油！
-    -
+    - PreparedStatementCreatorFactory,  PreparedStatementCreator, Session,
+    - Submit 完order后出了点问题。 先make it work，然后去增加点新功能。
+    - 去掉了数据filtering，submit之后发现 "org.springframework.jdbc. -Fixed AI
+    - Street Address Input Box 有问题 (已修复）
+    - Order 成功递交，但是数据库里没有显示新的order...?
+    - 跳过去了，暂时不理解。：/
+
+    core.JdbcOperations.update(org.springframework.jdbc.core.PreparedStatementCreator,
+    org.springframework.jdbc.support.KeyHolder)" because "this.jdbcOperations" is null
+
+
 
 H2 无法看到自己的输入的SQL数据，不知道数据被放在那里了。目前能链接，但是找不到，不知道该怎么办
 直接跑SpringBoot是没有办法解决这个问题的，需要在console里选择这个SQL，IntelliJ Integrated Development会帮你跑

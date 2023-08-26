@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+//@Repository
 
 //todo: 这里revisit，需要重新看一下method是怎么写的
 public class JdbcIngredientRepository implements IngredientRepository {

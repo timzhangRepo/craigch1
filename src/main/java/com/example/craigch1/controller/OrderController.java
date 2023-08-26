@@ -12,9 +12,9 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
-@Controller
+//@Controller
 @Slf4j
-@SessionAttributes("tacoOrder")
+//@SessionAttributes("tacoOrder")
 @RequestMapping("/orders")
 public class OrderController {
 

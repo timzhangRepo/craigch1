@@ -1,5 +1,7 @@
 
-
+- Target Finish 到 93 页
+    - Spring Data JDBC 的commandline runner无法persist数据到H2数据库中，而且console里没有报错不知道该咋办
+    - 存储时出现了返回的数据，但是数据库里还是不存在，不知道什么情况。
 
 - 目前在Uncharted Territory ，SQL 以及 controller 映射关系，是自己的弱点，需要好好学习去更正和修改，加油！
     - PreparedStatementCreatorFactory,  PreparedStatementCreator, Session,
@@ -7,7 +9,7 @@
     - 去掉了数据filtering，submit之后发现 "org.springframework.jdbc. -Fixed AI
     - Street Address Input Box 有问题 (已修复）
     - Order 成功递交，但是数据库里没有显示新的order...?
-    - 跳过去了，暂时不理解。：/
+    - 跳过去了，暂时不理解。：
 
     core.JdbcOperations.update(org.springframework.jdbc.core.PreparedStatementCreator,
     org.springframework.jdbc.support.KeyHolder)" because "this.jdbcOperations" is null

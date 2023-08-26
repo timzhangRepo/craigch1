@@ -21,8 +21,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RequestMapping("/design")
-@Controller
+//@RequestMapping("/design")
+//@Controller
 @SessionAttributes("tacoOrder")
 @Slf4j
 public class DesignTacoController {
@@ -79,7 +79,6 @@ public class DesignTacoController {
     public Taco taco(){
         return new Taco();
     }
-
     @ModelAttribute(name = "tacoOrder")
     public TacoOrder tacoOrder(){
         return new TacoOrder();

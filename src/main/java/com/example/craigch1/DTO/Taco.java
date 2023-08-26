@@ -1,19 +1,21 @@
 package com.example.craigch1.DTO;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
+@Entity
 @Data
-@Table
 public class Taco {
 
     @Id
+    @GeneratedValue
     private Long id;
     private Date createdAt = new Date();
     @NotNull
@@ -22,5 +24,6 @@ public class Taco {
 
     @NotNull
     @Size(min = 1, message = "You must choose at least 1 ingredient")
+    @ManyToMany()
     private List<Ingredient> ingredients;
 }

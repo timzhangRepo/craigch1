@@ -1,7 +1,7 @@
 package com.example.craigch1.controller;
 
 import com.example.craigch1.DTO.TacoOrder;
-import com.example.craigch1.data.OrderRepository;
+import com.example.craigch1.cruddata.OrderRepoData;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -12,16 +12,16 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
-//@Controller
+@Controller
 @Slf4j
-//@SessionAttributes("tacoOrder")
+@SessionAttributes("tacoOrder")
 @RequestMapping("/orders")
 public class OrderController {
 
-    private OrderRepository orderRepository;
+    private OrderRepoData orderRepoData;
 
-    public OrderController(OrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
+    public OrderController(OrderRepoData orderRepository) {
+        this.orderRepoData = orderRepository;
     }
 
     Logger logger = LoggerFactory.getLogger(OrderController.class);
@@ -35,7 +35,7 @@ public class OrderController {
             //如果在验证TacoOrder对象时发现了任何错误，这些错误都会被添加到这个Errors对象中
             return "orderForm";
         }
-        orderRepository.save(order);
+        orderRepoData.save(order);
         log.info("Order submitted: {}", order);
         sessionStatus.setComplete();
         return "redirect:/";

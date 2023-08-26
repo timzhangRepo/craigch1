@@ -1,7 +1,11 @@
 
-- Target Finish 到 93 页
+- Fix this application so that can takes an order using JPA
+
+- Target Finish 到 93 页 (Achieved)
     - Spring Data JDBC 的commandline runner无法persist数据到H2数据库中，而且console里没有报错不知道该咋办
     - 存储时出现了返回的数据，但是数据库里还是不存在，不知道什么情况。
+        ** 您观察得很正确。
+           jdbc:h2:mem:tacocloud 这个URL会将H2数据库实例化在内存中,数据仅存在于内存,应用退出后会丢失。
 
 - 目前在Uncharted Territory ，SQL 以及 controller 映射关系，是自己的弱点，需要好好学习去更正和修改，加油！
     - PreparedStatementCreatorFactory,  PreparedStatementCreator, Session,

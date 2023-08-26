@@ -5,7 +5,7 @@ import com.example.craigch1.DTO.Ingredient;
 import com.example.craigch1.DTO.Ingredient.*;
 import com.example.craigch1.DTO.Taco;
 import com.example.craigch1.DTO.TacoOrder;
-import com.example.craigch1.data.IngredientRepository;
+import com.example.craigch1.cruddata.IngredientRepoData;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -21,16 +21,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//@RequestMapping("/design")
-//@Controller
+@RequestMapping("/design")
+@Controller
 @SessionAttributes("tacoOrder")
 @Slf4j
 public class DesignTacoController {
     private static final Logger logger = LoggerFactory.getLogger(DesignTacoController.class);
-    private final IngredientRepository ingredientRepo;
+    private final IngredientRepoData ingredientRepoData;
     @Autowired
-    public DesignTacoController(IngredientRepository ingredientRepo) {
-        this.ingredientRepo = ingredientRepo;
+    public DesignTacoController(IngredientRepoData ingredientRepoData) {
+        this.ingredientRepoData = ingredientRepoData;
     }
     @GetMapping
     public String showDesignForm() {
@@ -48,7 +48,7 @@ public class DesignTacoController {
     }
     @ModelAttribute
     public void addIngredientsToModel(Model model) {
-        Iterable<Ingredient> ingredients = ingredientRepo.findAll();
+        Iterable<Ingredient> ingredients = ingredientRepoData.findAll();
         List<Ingredient> ingredientsList = new ArrayList<>();
         for(Ingredient ingredient: ingredients){
             ingredientsList.add(ingredient);

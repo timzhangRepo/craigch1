@@ -1,5 +1,17 @@
 
-- Fix this application so that can takes an order using JPA
+
+- Spring Security
+
+
+- MongoDb Section
+    - HARD STUCK 不管怎么连都连不上 Skip
+    - 寒哥的pdf，把username换成admin，然后加上
+    - spring.data.mongodb.database=mymongo 注释那个数据库
+
+
+Chapter 4
+
+- Fix this application so that can takes an order using JPA (achievd)
 
 - Target Finish 到 93 页 (Achieved)
     - Spring Data JDBC 的commandline runner无法persist数据到H2数据库中，而且console里没有报错不知道该咋办

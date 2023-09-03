@@ -1,11 +1,12 @@
 package com.example.craigch1.controller;
 
 
-import com.example.craigch1.DTO.Ingredient;
-import com.example.craigch1.DTO.Ingredient.*;
-import com.example.craigch1.DTO.Taco;
-import com.example.craigch1.DTO.TacoOrder;
+import com.example.craigch1.model.Ingredient;
+import com.example.craigch1.model.Ingredient.*;
+import com.example.craigch1.model.Taco;
+import com.example.craigch1.model.TacoOrder;
 import com.example.craigch1.cruddata.IngredientRepoData;
+import com.example.craigch1.repository.IngredientRepository;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -27,9 +28,9 @@ import java.util.stream.Collectors;
 @Slf4j
 public class DesignTacoController {
     private static final Logger logger = LoggerFactory.getLogger(DesignTacoController.class);
-    private final IngredientRepoData ingredientRepoData;
+    private final IngredientRepository ingredientRepoData;
     @Autowired
-    public DesignTacoController(IngredientRepoData ingredientRepoData) {
+    public DesignTacoController(IngredientRepository ingredientRepoData) {
         this.ingredientRepoData = ingredientRepoData;
     }
     @GetMapping

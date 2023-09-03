@@ -1,14 +1,14 @@
 package com.example.craigch1.DTO;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.Id;
 import lombok.*;
 
 
 @Data
-@Entity
+//@Entity
 public class Ingredient {
-    @Id  //这里用jarkata的
+//    @Id  //这里用jarkata的
     private final String id;
     private final String name;
     private final Type type;

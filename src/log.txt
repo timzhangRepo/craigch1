@@ -1,6 +1,13 @@
 
 
-- Spring Security
+
+
+
+
+-Chapter 5 （这本书不能跳来跳去，每个章节都做完一个project）
+- Spring Security （Authorized requests已经被deprecated） 东西有点散架
+    - antMachers 已经不能用了，在stackoverflow上找到了一些新的资源 (已解决）
+    - 
 
 
 - MongoDb Section

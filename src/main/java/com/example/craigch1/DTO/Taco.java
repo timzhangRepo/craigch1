@@ -1,6 +1,6 @@
 package com.example.craigch1.DTO;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -10,12 +10,12 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
-@Entity
+//@Entity
 @Data
 public class Taco {
 
-    @Id
-    @GeneratedValue
+//    @Id
+//    @GeneratedValue
     private Long id;
     private Date createdAt = new Date();
     @NotNull
@@ -24,6 +24,6 @@ public class Taco {
 
     @NotNull
     @Size(min = 1, message = "You must choose at least 1 ingredient")
-    @ManyToMany()
+//    @ManyToMany()
     private List<Ingredient> ingredients;
 }

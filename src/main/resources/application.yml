@@ -1,0 +1,36 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:Oijoij1231@cluster0.otgz8x2.mongodb.net/?retryWrites=true&w=majority
+      database: mymongo
+  main:
+    banner-mode: "off"
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: "jdbc:h2:file:~/testdb"
+    username: "sa"
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: "create"
+  thymeleaf:
+    prefix: "classpath:/templates/"
+    suffix: ".html"
+    cache: false
+
+server:
+  port: 8443
+  ssl:
+    key-store: mykeys.jks
+    key-store-password: password
+    key-password: password
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "beans"
+
+

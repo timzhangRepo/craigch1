@@ -1,5 +1,4 @@
 package com.example.craigch1.DTO;
-import jakarta.persistence.*;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -13,12 +12,12 @@ import java.util.List;
 import java.util.ArrayList;
 
 @Data
-@Entity
+//@Entity
 public class TacoOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue
+//    @Id
+//    @GeneratedValue
     private Long id;
     private Date placedAt;
 
@@ -37,7 +36,7 @@ public class TacoOrder implements Serializable {
     private String ccCVV;
 
 
-    @OneToMany(cascade = CascadeType.ALL)
+//    @OneToMany(cascade = CascadeType.ALL)
     private List<Taco> tacos = new ArrayList<>();
 
     public void addTaco(Taco taco){

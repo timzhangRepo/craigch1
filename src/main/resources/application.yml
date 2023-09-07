@@ -19,7 +19,14 @@ spring:
     prefix: "classpath:/templates/"
     suffix: ".html"
     cache: false
-
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 9974754249264723
+            client-secret: 0deb2aa1cd57ab9e3d375adbb287fe24
+            scope: email, public_profile
 server:
   port: 8443
   ssl:

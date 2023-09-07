@@ -3,18 +3,20 @@
 
 
 
+- 目前能login，之后提交完订单之后返回了一个403，不知道什么情况，需要修理一下。
 
--Chapter 5 （这本书不能跳来跳去，每个章节都做完一个project）
-- Spring Security （Authorized requests已经被deprecated） 东西有点散架
-    - antMachers 已经不能用了，在stackoverflow上找到了一些新的资源 (已解决）
-    - 
+- Spring Security （Authorized requests已经被deprecated）
+    - Template， Spring default会正常识别username和password，在/authenticate里，这个接口不需要自己写，login表单直接返回。
+    - getAuthroties()  这个method会返回roles，用来在Spring 的 SecurityFilterChain chain里做检测
+    - UserDetails 是一个接口，override getAuthroties() method
+    - Session Attribute 这一个东西我还是不太理解，需要细致的学习一下。
+
 
 
 - MongoDb Section
     - HARD STUCK 不管怎么连都连不上 Skip
     - 寒哥的pdf，把username换成admin，然后加上
     - spring.data.mongodb.database=mymongo 注释那个数据库
-
 
 Chapter 4
 

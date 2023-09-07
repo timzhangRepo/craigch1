@@ -1,6 +1,6 @@
 package com.example.craigch1.repository;
 
-import com.example.craigch1.model.Ingredient;
+import com.example.craigch1.DTO.Ingredient;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

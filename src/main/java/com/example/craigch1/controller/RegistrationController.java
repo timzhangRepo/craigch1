@@ -1,7 +1,7 @@
 package com.example.craigch1.controller;
 
 import com.example.craigch1.DTO.RegistrationForm;
-import com.example.craigch1.cruddata.UserRepository;
+import com.example.craigch1.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

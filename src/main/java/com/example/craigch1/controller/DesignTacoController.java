@@ -1,10 +1,10 @@
 package com.example.craigch1.controller;
 
 
-import com.example.craigch1.model.Ingredient;
-import com.example.craigch1.model.Ingredient.*;
-import com.example.craigch1.model.Taco;
-import com.example.craigch1.model.TacoOrder;
+import com.example.craigch1.DTO.Ingredient;
+import com.example.craigch1.DTO.Ingredient.*;
+import com.example.craigch1.DTO.Taco;
+import com.example.craigch1.DTO.TacoOrder;
 import com.example.craigch1.cruddata.IngredientRepoData;
 import com.example.craigch1.repository.IngredientRepository;
 import jakarta.validation.Valid;

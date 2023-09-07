@@ -13,7 +13,7 @@
             <h3>Designate your wrap:</h3>
             <div th:each="ingredient : ${wrap}">
                 <input
-                        th:field="*{ingredientList}"
+                        th:field="*{ingredients}"
                         type="checkbox"
                         th:value="${ingredient.id}"
                 />
@@ -24,7 +24,7 @@
             <h3>Pick your protein:</h3>
             <div th:each="ingredient : ${protein}">
                 <input
-                        th:field="*{ingredientList}"
+                        th:field="*{ingredients}"
                         type="checkbox"
                         th:value="${ingredient.id}"
                 />
@@ -35,7 +35,7 @@
             <h3>Choose your cheese:</h3>
             <div th:each="ingredient : ${cheese}">
                 <input
-                        th:field="*{ingredientList}"
+                        th:field="*{ingredients}"
                         type="checkbox"
                         th:value="${ingredient.id}"
                 />
@@ -46,7 +46,7 @@
             <h3>Determine your veggies:</h3>
             <div th:each="ingredient : ${veggies}">
                 <input
-                        th:field="*{ingredientList}"
+                        th:field="*{ingredients}"
                         type="checkbox"
                         th:value="${ingredient.id}"
                 />
@@ -57,7 +57,7 @@
             <h3>Select your sauce:</h3>
             <div th:each="ingredient : ${sauce}">
                 <input
-                        th:field="*{ingredientList}"
+                        th:field="*{ingredients}"
                         type="checkbox"
                         th:value="${ingredient.id}"
                 />

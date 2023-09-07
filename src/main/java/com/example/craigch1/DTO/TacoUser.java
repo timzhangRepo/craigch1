@@ -6,9 +6,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 public class TacoUser implements UserDetails {
@@ -26,6 +31,8 @@ public class TacoUser implements UserDetails {
     private  String state;
     private  String phonenumber;
 
+    private Set<String> roles = new HashSet<>();
+
     public TacoUser(){};
     public TacoUser(String username, String password, String fullname, String city, String state, String phonenumber) {
         this.username = username;
@@ -37,7 +44,10 @@ public class TacoUser implements UserDetails {
     }
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        roles.add("USER");
+        return roles.stream().map(role->
+                new SimpleGrantedAuthority("ROLE_"+role))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -68,5 +78,13 @@ public class TacoUser implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public Set<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<String> roles) {
+        this.roles = roles;
     }
 }
